@@ -211,11 +211,12 @@ int funcion_opciones()
 
     system("cls");
     printf("\n******* MENU DE OPCIONES ******* \n\n");
-    printf(" 1- ALTA \n");
+    printf(" 1- ALTA\n");
     printf(" 2- MODIFICAR \n");
-    printf(" 3- BAJA \n");
-    printf(" 4- INFORMAR \n");
-    printf(" 5- SALIR \n ");
+    printf(" 3- BAJA\n");
+    printf(" 4- INFORMAR\n");
+    printf(" 5- REPORTES\n");
+    printf(" 6- SALIR\n ");
     while(!funcion_getStringNumeros("Ingrese una opcion del 1-5 : ",auxOpcion))
     {
         printf("ERROR- La opcion tiene que ser solo numeros del 1 al 5\n\n");
@@ -571,8 +572,10 @@ int sortEmployees(eEmployee list[], int len)
 
 void reports (eEmployee list[],int len)
 {
-    float acum,promedio,contador;
-    int contSuperan;
+    float acum=0.00;
+    float promedio=0.00;
+    float contador=0.00;
+    int contSuperan=0.00;
 
     for(int i = 0; i < len; i++)
     {

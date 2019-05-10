@@ -59,12 +59,23 @@ int main()
             else
             {
                 sortEmployees(employee, MAX);
-                reports(employee, MAX);
+
                 viewEmployees(employee, MAX);
             };
 
             break;
         case 5:
+            if (flagSinAlta == 0)
+            {
+                printf("\nNO EXISTEN EMPLEADOS EN EL SISTEMA\n\n");
+                break;
+            }
+            else
+            {
+                reports(employee,MAX);
+            };
+            break;
+        case 6:
             printf("Saliendo...");
             exit(-1);
             break;
